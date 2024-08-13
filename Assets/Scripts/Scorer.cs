@@ -7,8 +7,11 @@ public class Scorer : MonoBehaviour
     int bumps = 0;
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("You have bumped into a wall " + bumps + " times");
-        bumps++;
+        if (collision.gameObject.tag != "Hit")
+        {
+            Debug.Log("You have bumped into a wall " + bumps + " times");
+            bumps++;
+        }
     }
 
 
