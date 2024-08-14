@@ -5,7 +5,12 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     [SerializeField]
+    float Maxbound_X, Minbound_X, Maxbound_Z, Minbound_Z;
+
+    [SerializeField]
     float speed = 10f;
+
+    private Vector3 tempos;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +22,7 @@ public class Movement : MonoBehaviour
     void Update()
     {
         MovePlayer();
+        AntiGlitch();
     }
     public void PrintInstructions()
     {
@@ -30,5 +36,20 @@ public class Movement : MonoBehaviour
         float zValue = Input.GetAxis("Vertical") * Time.deltaTime * speed;
 
         transform.Translate(xValue, 0, zValue);
+    }
+    private void AntiGlitch()
+    {
+        tempos = transform.position;
+
+        if (tempos.x > Maxbound_X)
+            tempos.x = Maxbound_X;
+        else if (tempos.x < Minbound_X)
+            tempos.x = Minbound_X;
+        else if (tempos.z > Maxbound_Z)
+            tempos.z = Maxbound_Z;
+        else if (tempos.z < Minbound_Z)
+            tempos.z = Minbound_Z;
+
+        transform.position = tempos;
     }
 }

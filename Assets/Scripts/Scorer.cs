@@ -9,8 +9,8 @@ public class Scorer : MonoBehaviour
     {
         if (collision.gameObject.tag != "Hit")
         {
-            Debug.Log("You have bumped into a wall " + bumps + " times");
             bumps++;
+            Debug.Log("You have bumped into a wall " + bumps + " times");
         }
     }
 
