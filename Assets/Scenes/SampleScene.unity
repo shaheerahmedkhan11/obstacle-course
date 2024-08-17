@@ -3868,6 +3868,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4977756752418434654, guid: 06f2199c5135f7e4ba28052ee4ebe0d4, type: 3}
+      propertyPath: Maxbound_X
+      value: 9.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4977756752418434654, guid: 06f2199c5135f7e4ba28052ee4ebe0d4, type: 3}
+      propertyPath: Maxbound_Z
+      value: 9.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4977756752418434654, guid: 06f2199c5135f7e4ba28052ee4ebe0d4, type: 3}
+      propertyPath: Minbound_X
+      value: -9.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4977756752418434654, guid: 06f2199c5135f7e4ba28052ee4ebe0d4, type: 3}
+      propertyPath: Minbound_Z
+      value: -9.4
+      objectReference: {fileID: 0}
     - target: {fileID: 5262597071988106295, guid: 06f2199c5135f7e4ba28052ee4ebe0d4, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
